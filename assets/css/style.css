@@ -1,0 +1,32 @@
+.heading {
+    text-align: center;
+    font-family: 
+}
+
+#hangmanTitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100px;
+}
+
+#subheading {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+}
+
+.mainBody {
+    border: 2px solid black;
+}
+
+.image {
+    float: left;
+}
+
+.rightParagraph {
+    float: right;
+}
+
+
+
+/* Fonts taken from GoogleFonts
+font-family: 'Raleway', sans-serif; - title
+font-family: 'Playfair Display', serif; - english looking font */
