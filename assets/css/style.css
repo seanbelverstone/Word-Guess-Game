@@ -1,3 +1,5 @@
+/* Headings */
+
 .heading {
     text-align: center;
     font-family: 
@@ -13,19 +15,28 @@
     font-size: 80px;
 }
 
+/* Main Body Area */
+
 .mainBody {
-    border: 2px solid black;
+    margin: 50%;
 }
 
-.image {
+.column {
     float: left;
+    width: 45%;
+    padding: 10px;
+    background-color: gray;
 }
 
-.rightParagraph {
+#rightParagraph {
     float: right;
 }
 
-
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 /* Fonts taken from GoogleFonts
 font-family: 'Raleway', sans-serif; - title
