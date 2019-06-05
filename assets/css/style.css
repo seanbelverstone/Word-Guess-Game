@@ -2,7 +2,6 @@
 
 .heading {
     text-align: center;
-    font-family: 
 }
 
 #hangmanTitle {
@@ -17,10 +16,34 @@
 
 /* Main Body Area */
 
-.mainBody {
-    margin: 50%;
+body {
+    background-color: lavender;
 }
 
+.mainBody {
+    margin: 50px 15% auto 15%;
+}
+
+.col-lg-6 {
+    border: 2px solid black;
+    height: 100;
+    margin-bottom: 50px;
+}
+
+.image {
+    padding-left: 25px;
+    padding-top: 50px;
+}
+
+p {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    padding-top: 30px;
+}
+
+#lettersGuessed {
+    padding-bottom: 30px;
+}
 
 
 /* Fonts taken from GoogleFonts
