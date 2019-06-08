@@ -7,12 +7,7 @@ var wins = 0
 var currentWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
 var guessesLeft = 12;
 var lettersGuessed = document.getElementById("wrongLetter")
-// var answerArray = [""];
-// for (var i = 0; i < currentWord.length; i++) {
-//     answerArray[i] = "_";
-// }
-// var remainingLetters = currentWord.length;
-
+var wordLetters = Array.from(currentWord);
 
 // Setting functions for start of game
 
@@ -38,14 +33,6 @@ document.onkeyup = function(event) {
     setWins();
     setGuesses();
     setCurrentWord();
-
-    for (var i = 0; i < wordList.length; i++) {
-        if (
-            wordList[i].charAt(0) === keyPressed
-        ) {
-            console.log(currentWord[i]);
-        }
-    }
-
+    
 }
 
