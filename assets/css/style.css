@@ -9,6 +9,7 @@
     background-position: center;
     width: 100%;
     height: 100%;
+    border-bottom: 5px black solid;
     
 }
 
@@ -20,7 +21,6 @@
 #subheading {
     font-family: 'Playfair Display', serif;
     font-size: 80px;
-    color: midnightblue;
 }
 
 /* Main Body Area */
@@ -37,13 +37,14 @@ body {
 
 .mainBody {
     margin: 50px 15% auto 15%;
-    background-color: lavender;
+
 }
 
 .col-lg-6 {
     border: 2px solid black;
     height: 100;
     margin-bottom: 50px;
+    background-color: lavender;
 }
 
 .image {
