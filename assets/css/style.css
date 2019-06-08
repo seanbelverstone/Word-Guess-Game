@@ -58,7 +58,7 @@ p {
     padding-top: 30px;
 }
 
-#wins, #guessesLeft {
+#wins, #guessesLeft, #currentWord {
     text-align: center;
     color: darkred;
     font-weight: bolder;
