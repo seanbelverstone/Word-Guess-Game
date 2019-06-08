@@ -58,6 +58,12 @@ p {
     padding-top: 30px;
 }
 
+#wins, #guessesLeft {
+    text-align: center;
+    color: darkred;
+    font-weight: bolder;
+}
+
 #lettersGuessed {
     padding-bottom: 30px;
 }
