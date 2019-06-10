@@ -8,14 +8,10 @@ var currentWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperC
 var guessesLeft = 12;
 var lettersGuessed = document.getElementById("wrongLetter")
 var wordLetters = Array.from(currentWord);
-console.log(wordLetters);
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w",
 "x","y","z"];
-var answerArray = [];
-    for (var i = 0; i < currentWord.length; i++) {
-    answerArray[i] = "_";
-}
-
+var underscoreArray = ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", 
+"_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_"]
 
 // Setting functions for start of game
 
@@ -42,11 +38,12 @@ document.onkeyup = function(event) {
     setGuesses();
     setCurrentWord();
 
-    if (keyPressed.indexOf(wordLetters) === alphabet) {
+var checkLetter = function (keyPressed, wordLetters) {
+    if (keyPressed.indexOf(alphabet) === wordLetters) {
         console.log("nice");
     } else {
         console.log("try again");
+     }
     }
 
 }
-
