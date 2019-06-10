@@ -1,7 +1,7 @@
 // Array of words
 var wordList = ["big ben", "queen elizabeth", "james bond", "football", "full english breakfast", 
 "cricket", "sherlock holmes", "stonehenge", "union jack", "the beatles", "fish and chips", "shakespeare",
-"kilts", "ireland", "scotland", "wales", "england"];
+"kilts", "ireland", "scotland", "wales", "england", "scone", "the thames"];
 
 var wins = 0
 var currentWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
@@ -38,12 +38,17 @@ document.onkeyup = function(event) {
     setGuesses();
     setCurrentWord();
 
-var checkLetter = function (keyPressed, wordLetters) {
-    if (keyPressed.indexOf(alphabet) === wordLetters) {
-        console.log("nice");
-    } else {
-        console.log("try again");
-     }
-    }
-
 }
+
+function changeLetters(wordLetters) {
+    for (var i= 0; i < wordLetters.length; i++) {
+        if (wordLetters.indexOf(alphabet)) {
+        currentWord.replace(underscoreArray);
+        console.log(wordLetters);
+        } else {
+            console.log("nope");
+        }
+    }
+}
+
+// changeLetters(wordLetters);
