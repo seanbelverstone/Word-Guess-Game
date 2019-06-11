@@ -5,8 +5,8 @@ var wordList = ["big ben", "queen elizabeth", "james bond", "football", "full en
 
 var wins = 0;
 var currentWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+var currentWordSplit = currentWord.split("");
 var ghostWord = currentWord.replace(/[a-z]/gi, '_');
-var currentWordSplit = ghostWord.split("");
 var guessesLeft = 12;
 var lettersGuessed = document.getElementById("wrongLetter")
 // var wordLetters = Array.from(currentWord);
@@ -33,19 +33,27 @@ function setCurrentWord() {
 
 //User input code
 document.onkeyup = function(event) {
-    var keyPressed = event.key.toLowerCase();
+    var keyPressed = event.key.toUpperCase();
     console.log("You pressed " + keyPressed);
     setWins();
     setGuesses();
     setCurrentWord();
 
-    for (var i = 0; i < currentWord.length; i++) {
-        if (currentWord.indexOf(keyPressed)) {
-            console.log(currentWord);
+
+
+ 
+console.log(currentWord);
+
+    var indexPosition = currentWordSplit.indexOf(keyPressed);
+
+    for (var i = 0; i < currentWordSplit.length; i++) {
+        if (keyPressed.indexOf(currentWordSplit[""])) {
+            console.log(indexPosition);
+            // ghostWord.replace(document.getElementById(currentWord));
         }
     }
-}
 
+}
 
 
 // var wordToGuess = wordLetters;
