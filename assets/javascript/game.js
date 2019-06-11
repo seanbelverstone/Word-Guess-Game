@@ -3,31 +3,32 @@ var wordList = ["big ben", "queen elizabeth", "james bond", "football", "full en
 "cricket", "sherlock holmes", "stonehenge", "union jack", "the beatles", "fish and chips", "shakespeare",
 "kilts", "ireland", "scotland", "wales", "england", "scone", "the thames"];
 
-var wins = 0
+var wins = 0;
 var currentWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+var ghostWord = currentWord.replace(/[a-z]/gi, '_');
+var currentWordSplit = ghostWord.split("");
 var guessesLeft = 12;
 var lettersGuessed = document.getElementById("wrongLetter")
-var wordLetters = Array.from(currentWord);
+// var wordLetters = Array.from(currentWord);
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w",
 "x","y","z"];
-var underscoreArray = ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", 
-"_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_", "_"]
 
 // Setting functions for start of game
 
 function setWins() {
-    winsLocation = document.getElementById("wins");
+    var winsLocation = document.getElementById("wins");
     winsLocation.innerHTML = wins;
 }
 
 function setGuesses() {
-    guessesLocation = document.getElementById("guessesLeft");
+    var guessesLocation = document.getElementById("guessesLeft");
     guessesLocation.innerHTML = guessesLeft;
 }
 
 function setCurrentWord() {
-    wordLocation = document.getElementById("currentWord");
-    wordLocation.innerHTML = currentWord;
+    var wordLocation = document.getElementById("currentWord");
+    wordLocation.innerHTML = ghostWord;
+    console.log(ghostWord)
 }
 
 //User input code
@@ -38,17 +39,16 @@ document.onkeyup = function(event) {
     setGuesses();
     setCurrentWord();
 
-}
-
-function changeLetters(wordLetters) {
-    for (var i= 0; i < wordLetters.length; i++) {
-        if (wordLetters.indexOf(alphabet)) {
-        currentWord.replace(underscoreArray);
-        console.log(wordLetters);
-        } else {
-            console.log("nope");
+    for (var i = 0; i < currentWord.length; i++) {
+        if (currentWord.indexOf(keyPressed)) {
+            console.log(currentWord);
         }
     }
 }
 
-// changeLetters(wordLetters);
+
+
+// var wordToGuess = wordLetters;
+// var displayArray = Array(wordToGuess.length).fill('_');
+
+

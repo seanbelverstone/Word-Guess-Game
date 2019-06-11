@@ -58,6 +58,10 @@ p {
     padding-top: 30px;
 }
 
+div {
+    letter-spacing: 2px;
+}
+
 #wins, #guessesLeft, #currentWord {
     text-align: center;
     color: darkred;
