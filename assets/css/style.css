@@ -54,6 +54,7 @@ body {
 
 img {
     padding-top: 50px;
+    display: none;
 }
 
 p {

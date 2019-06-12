@@ -69,181 +69,189 @@ console.log(currentWord);
 }
 
 }
+//Below code doesn't work
 
-if (wordList.indexOf(0)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// //If statement that shows the picture corresponding with the current word selected
+// if (wordList.indexOf(0)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
  
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/bigben.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//         document.getElementById("img");
+//     };
+//     img.src = 'assets/images/bigben.jpg';
 
-} else if (wordList.indexOf(1)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(1)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/queenelizabeth.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//         document.getElementById("img");
+//     };
+//     img.src = 'assets/images/queenelizabeth.jpg';
 
-} else if (wordList.indexOf(2)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(2)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/jamesbond.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/jamesbond.jpg';
 
-} else if (wordList.indexOf(3)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(3)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/football.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/football.jpg';
 
-} else if (wordList.indexOf(4)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(4)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/fullenglish.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/fullenglish.jpg';
 
-} else if (wordList.indexOf(5)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(5)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/cricket.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/cricket.jpg';
 
-} else if (wordList.indexOf(6)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(6)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/sherlockholmes.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/sherlockholmes.jpg';
 
-} else if (wordList.indexOf(7)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(7)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/stonehenge.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/stonehenge.jpg';
 
-} else if (wordList.indexOf(8)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(8)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/unionjack.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/unionjack.jpg';
 
-} else if (wordList.indexOf(9)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(9)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/thebeatles.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/thebeatles.jpg';
 
-} else if (wordList.indexOf(10)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(10)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/fishandchips.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/fishandchips.jpg';
 
-} else if (wordList.indexOf(11)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(11)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/shakespeare.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/shakespeare.jpg';
 
-} else if (wordList.indexOf(12)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(12)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/kilts.jpg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/kilts.jpg';
 
-} else if (wordList.indexOf(13)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(13)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/ireland.png';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/ireland.png';
 
-} else if (wordList.indexOf(14)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(14)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/scotland.png';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/scotland.png';
 
-} else if (wordList.indexOf(15)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(15)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/wales.png';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/wales.png';
 
-} else if (wordList.indexOf(16)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(16)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/england.png';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/england.png';
 
-} else if (wordList.indexOf(17)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(17)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/scone.jpeg';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/scone.jpeg';
 
-} else if (wordList.indexOf(18)) {
-    var img = new Image(400, 300);
-    var div = document.getElementById('img');
+// } else if (wordList.indexOf(18)) {
+//     var img = new Image(400, 300);
+//     var div = document.getElementById('img');
 
-    img.onload = function() {
-        div.appendChild(img);
-    };
-    img.src = 'assets/images/thames';
+//     img.onload = function() {
+//         div.appendChild(img);
+//     };
+//     img.src = 'assets/images/thames';
     
-}
+// }
+
+// 
+
+
 /* things to add
--replace _ with characters
--allowed characters (a-z) - if incorrect character bring up alert. Disallow duplicate letters
+-replace _ with characters when correct character pressed
+-Disallow duplicate letters
 -when word complete - add image to page
 -bring up button(?) to continue, add function to button.. newdiv? append ect */ 
