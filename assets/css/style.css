@@ -62,7 +62,7 @@ div {
     letter-spacing: 2px;
 }
 
-#wins, #guessesLeft, #currentWord {
+#wins, #guessesLeft, #currentWord, #lettersGuessed {
     text-align: center;
     color: darkred;
     font-weight: bolder;

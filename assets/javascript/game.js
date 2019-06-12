@@ -8,7 +8,7 @@ var currentWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperC
 var currentWordSplit = currentWord.split("");
 var ghostWord = currentWord.replace(/[a-z]/gi, '_');
 var guessesLeft = 12;
-var lettersGuessed = document.getElementById("wrongLetter")
+var wrongLetters = [];
 // var wordLetters = Array.from(currentWord);
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w",
 "x","y","z"];
@@ -28,7 +28,11 @@ function setGuesses() {
 function setCurrentWord() {
     var wordLocation = document.getElementById("currentWord");
     wordLocation.innerHTML = ghostWord;
-    console.log(ghostWord)
+}
+
+function showWrongLetters() {
+    var lettersLocation = document.getElementById("lettersGuessed").innerHTML = wrongLetters;
+        lettersLocation.innerHTML = wrongLetters;
 }
 
 //User input code
@@ -39,24 +43,21 @@ document.onkeyup = function(event) {
     setGuesses();
     setCurrentWord();
 
-
-
  
 console.log(currentWord);
 
     var indexPosition = currentWordSplit.indexOf(keyPressed);
 
     for (var i = 0; i < currentWordSplit.length; i++) {
-        if (keyPressed.indexOf(currentWordSplit[""])) {
-            console.log(indexPosition);
-            // ghostWord.replace(document.getElementById(currentWord));
-        }
+    }   if (indexPosition !== -1) {
+            console.log("nice");
+    }   else {
+            console.log("try again");
+            guessesLeft--;
+            wrongLetters.push(keyPressed);
+            console.log(wrongLetters);
+            document.getElementById("lettersGuessed").innerHTML = wrongLetters; //Prints the wrong letters to the screen
     }
 
 }
-
-
-// var wordToGuess = wordLetters;
-// var displayArray = Array(wordToGuess.length).fill('_');
-
 
