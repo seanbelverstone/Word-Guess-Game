@@ -47,8 +47,12 @@ body {
     background-color: lavender;
 }
 
-.image {
+#img {
     padding-left: 25px;
+    padding-top: 50px;
+}
+
+img {
     padding-top: 50px;
 }
 
