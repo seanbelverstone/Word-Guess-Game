@@ -3,11 +3,12 @@ var wordList = ["big ben", "queen elizabeth", "james bond", "football", "full en
 "cricket", "sherlock holmes", "stonehenge", "union jack", "the beatles", "fish and chips", "shakespeare",
 "kilts", "ireland", "scotland", "wales", "england", "scone", "the thames"];
 
-var wins = 0;
-var currentWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
-var currentWordSplit = currentWord.split("");
-var ghostWord = currentWord.replace(/[a-z]/gi, '_');
-var guessesLeft = 12;
+var wins;
+var currentWord;
+var currentWordSplit;
+var ghostWord;
+var ghostWordSplit;
+var guessesLeft;
 var wrongLetters = [];
 // var wordLetters = Array.from(currentWord);
 var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w",
@@ -15,6 +16,19 @@ var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
 "T", "U", "V", "W", "X", "Y", "Z"];
 
 // Setting functions for start of game
+
+function reset() {
+        //reset guesses
+        //get a new word
+        // alert player they have lost
+        // reset letter guesses
+        // re create ghost array
+    wins = 0;
+    currentWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+    ghostWord = Array(currentWord.length).fill('_');
+    guessesLeft = 12;
+    wrongLetters = [];
+}
 
 function setWins() {
     var winsLocation = document.getElementById("wins");
@@ -40,35 +54,58 @@ function showWrongLetters() {
 document.onkeyup = function(event) {
     var keyPressed = event.key.toUpperCase();
     console.log("You pressed " + keyPressed);
-    setWins();
-    setGuesses();
-    setCurrentWord();
+    // setWins();
+    // setGuesses();
+    // setCurrentWord(); updates should be done at the end and not at the beginning
 
- 
-console.log(currentWord);
+    var indexPosition = currentWord.indexOf(keyPressed);
 
-    var indexPosition = currentWordSplit.indexOf(keyPressed);
-
-    for (var i = 0; i < currentWordSplit.length; i++) { //check if letter is valid
-        if (alphabet.indexOf(keyPressed, i) === -1) {
-            alert("try a real letter");
-            break;
-        } else if (indexPosition !== -1) {
+    if (indexPosition != -1) {
+        for (var i = 0; i < currentWord.length; i++) { //check if letter is valid
             console.log("nice");
-            currentWord.replace(ghostWord, currentWordSplit, [i]);
-            break;
-        } else { 
-            console.log("try again");
+            //maybe add a for loop, to check the index position and change that index instead.
+            if (currentWord.charAt(i) === keyPressed) {
+                ghostWord[i] = keyPressed;
+            } 
+        }
+    } else { 
+        console.log("try again");
+        if (alphabet.indexOf(keyPressed, i) === -1 || wrongLetters.indexOf(keyPressed) === -1) {
             guessesLeft--;
             wrongLetters.push(keyPressed);
             console.log(wrongLetters);
             document.getElementById("lettersGuessed").innerHTML = wrongLetters; //Prints the wrong letters to the screen
-            break;
         }
-           
+    }
+
+    if (guessesLeft === 0) {
+        alert("game over");
+        reset();
+    }
+
+    if (currentWord.indexOf(keyPressed > -1)) {
+        wins++
+        setCurrentWord();
+        setGuesses();
+        showWrongLetters();
+    }
+
+
+    setWins();
+    setGuesses();
+    setCurrentWord();
 }
 
-}
+reset();
+
+/* things to add
+-replace _ with characters when correct character pressed
+-Disallow duplicate letters
+-when word complete - add image to page
+-bring up button(?) to continue, add function to button.. newdiv? append ect */ 
+
+
+
 //Below code doesn't work
 
 // //If statement that shows the picture corresponding with the current word selected
@@ -250,8 +287,4 @@ console.log(currentWord);
 // 
 
 
-/* things to add
--replace _ with characters when correct character pressed
--Disallow duplicate letters
--when word complete - add image to page
--bring up button(?) to continue, add function to button.. newdiv? append ect */ 
+
