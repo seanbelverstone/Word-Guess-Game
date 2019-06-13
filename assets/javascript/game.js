@@ -28,6 +28,15 @@ function reset() {
     ghostWord = Array(currentWord.length).fill('_');
     guessesLeft = 12;
     wrongLetters = [];
+    showWrongLetters();
+}
+
+function win() { //does the same as reset but doesn't update wins
+    currentWord = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+    ghostWord = Array(currentWord.length).fill('_');
+    guessesLeft = 12;
+    wrongLetters = [];
+    showWrongLetters();
 }
 
 function setWins() {
@@ -63,7 +72,7 @@ document.onkeyup = function(event) {
     if (indexPosition != -1) {
         for (var i = 0; i < currentWord.length; i++) { //check if letter is valid
             console.log("nice");
-            //maybe add a for loop, to check the index position and change that index instead.
+
             if (currentWord.charAt(i) === keyPressed) {
                 ghostWord[i] = keyPressed;
             } 
@@ -82,12 +91,10 @@ document.onkeyup = function(event) {
         alert("game over");
         reset();
     }
-
-    if (currentWord.indexOf(keyPressed > -1)) {
+    if (ghostWord.join( "" ) === currentWord) {
         wins++
-        setCurrentWord();
-        setGuesses();
-        showWrongLetters();
+        alert("Well done!");
+        win();
     }
 
 
